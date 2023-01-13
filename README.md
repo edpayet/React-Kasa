@@ -1,5 +1,7 @@
-# Getting Started with Create React App
+# Kasa - React project
 
+Project 7 of the Openclassrooms Web Developper Course. The final project of the course.
+The front-end, made with React, of a real estate rental website.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
