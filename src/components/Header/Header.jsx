@@ -7,7 +7,6 @@ export default function Header() {
     { to: `/`, title: 'Acceuil' },
     { to: `/a-propos`, title: 'A Propos' },
   ];
-  // const navLinkClasses = `${styles.logo}`;
   return (
     <header>
       <ReactLogo className={styles.logo} />

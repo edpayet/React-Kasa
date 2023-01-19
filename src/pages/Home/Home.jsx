@@ -1,37 +1,27 @@
 import './Home.css';
 import getLogements from '../../service/getLogements';
-import { useLoaderData, Link } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import Hero from '../../components/Hero/Hero';
+import Gallery from '../../components/Gallery/Gallery';
+import Card from '../../components/Card/Card';
 
 export default function Home() {
   const { logements } = useLoaderData();
-
+  // <Link to={`/logements/${id}`}>{title}</Link>
   return (
     <div className="Home">
       <Hero />
-      <h1>Logements</h1>
-
       {logements.length ? (
-        <ul>
-          {logements.map(
-            ({
-              id,
-              title,
-              cover,
-              pictures,
-              description,
-              host,
-              rating,
-              location,
-              equipments,
-              tags,
-            }) => (
-              <li key={id}>
-                <Link to={`/logements/${id}`}>{title}</Link>
-              </li>
-            )
-          )}
-        </ul>
+        <Gallery>
+          {logements.map((logement) => (
+            <Card
+              key={logement.id}
+              to={`/logements/${logement.id}`}
+              title={logement.title}
+              cover={logement.cover}
+            />
+          ))}
+        </Gallery>
       ) : (
         <p>
           <i>Aucun logement</i>

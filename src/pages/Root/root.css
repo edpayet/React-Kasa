@@ -8,6 +8,9 @@
 
 main,
 header {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
   padding: 40px 100px 0;
   font-family: var(--main-font);
   font-style: normal;
@@ -15,14 +18,33 @@ header {
   font-size: 24px;
 }
 
+main {
+  padding-bottom: 209px;
+}
+
 body {
   position: relative;
   min-height: 100vh;
 }
 
-@media (max-width: 744px) {
+@media (max-width: 1024px) {
   main,
   header {
     padding: 20px 20px 0;
   }
+
+  main {
+    padding-bottom: 209px;
+  }
 }
+
+/* @media (max-width: 744px) {
+  main,
+  header {
+    padding: 20px 20px 0;
+  }
+
+  main {
+    padding-bottom: 209px;
+  }
+} */
