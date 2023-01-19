@@ -1,12 +1,25 @@
+/* eslint-disable no-unused-vars */
 import { useLoaderData } from 'react-router-dom';
 import getLogementById from '../../service/getLogementById';
 
 export default function Logement() {
-  const logement = useLoaderData().logement;
+  const {
+    id,
+    title,
+    cover,
+    pictures,
+    description,
+    host,
+    rating,
+    location,
+    equipments,
+    tags,
+  } = useLoaderData().logement;
 
   return (
     <div className="Logement">
-      <h1>Logement {logement.id}</h1>
+      <h1>{title}</h1>
+      <p>{location}</p>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import './Home.css';
 import getLogements from '../../service/getLogements';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, Link } from 'react-router-dom';
 
 export default function Home() {
   const { logements } = useLoaderData();
@@ -24,7 +24,9 @@ export default function Home() {
               equipments,
               tags,
             }) => (
-              <li key={id}>{title}</li>
+              <li key={id}>
+                <Link to={`/logements/${id}`}>{title}</Link>
+              </li>
             )
           )}
         </ul>

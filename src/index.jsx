@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Root from './pages/root';
+import Root from './pages/Root/root';
 import NotFound from './pages/Not Found/NotFound';
 import Home, { loader as homeLoader } from './pages/Home/Home';
 import Logement, { loader as logementLoader } from './pages/Logement/Logement';
