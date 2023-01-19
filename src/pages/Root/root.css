@@ -6,12 +6,18 @@
   --grey-color: #f6f6f6;
 }
 
-body {
+main,
+header {
   padding: 40px 100px 0;
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
 }
 
 @media (max-width: 744px) {
-  body {
+  main,
+  header {
     padding: 20px 20px 0;
   }
 }

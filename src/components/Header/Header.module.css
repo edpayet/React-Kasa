@@ -1,4 +1,4 @@
-.header {
+header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -6,7 +6,7 @@
   height: 68px;
 }
 
-.header * {
+header * {
   color: var(--primary-color);
 }
 
@@ -40,7 +40,7 @@ nav {
 }
 
 @media (max-width: 744px) {
-  .header {
+  header {
     height: 47px;
   }
   .logo {

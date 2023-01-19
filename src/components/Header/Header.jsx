@@ -9,7 +9,7 @@ export default function Header() {
   ];
   // const navLinkClasses = `${styles.logo}`;
   return (
-    <div className={styles.header}>
+    <header>
       <ReactLogo className={styles.logo} />
       <nav>
         {links.map(({ to, title }) => (
@@ -27,6 +27,6 @@ export default function Header() {
           </NavLink>
         ))}
       </nav>
-    </div>
+    </header>
   );
 }
