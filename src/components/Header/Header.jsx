@@ -12,8 +12,9 @@ export default function Header() {
     <header>
       <ReactLogo className={styles.logo} />
       <nav>
-        {links.map(({ to, title }) => (
+        {links.map(({ to, title }, index) => (
           <NavLink
+            key={index}
             to={to}
             className={({ isActive, isPending }) =>
               isActive

@@ -1,0 +1,40 @@
+.hero {
+  display: flex;
+  border-radius: 25px;
+  height: 224px;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(IMG.png) no-repeat;
+  background-position: bottom center;
+  background-size: fill;
+  overflow: hidden;
+}
+
+.hero br {
+  display: none;
+}
+
+.hero h1 {
+  z-index: 1;
+  margin: auto;
+  padding: 0 40px;
+  color: white;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+@media (max-width: 744px) {
+  .hero {
+    height: 112px;
+    border-radius: 10px;
+  }
+  .hero br {
+    display: initial;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+    padding-left: 20px;
+    margin-left: 0;
+  }
+}

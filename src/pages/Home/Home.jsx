@@ -1,12 +1,14 @@
 import './Home.css';
 import getLogements from '../../service/getLogements';
 import { useLoaderData, Link } from 'react-router-dom';
+import Hero from '../../components/Hero/Hero';
 
 export default function Home() {
   const { logements } = useLoaderData();
 
   return (
     <div className="Home">
+      <Hero />
       <h1>Logements</h1>
 
       {logements.length ? (
