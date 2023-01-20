@@ -1,5 +1,5 @@
 import styles from './Footer.module.css';
-import { ReactComponent as ReactLogo } from '../../logo.svg';
+import { ReactComponent as ReactLogo } from '../../icons/logo.svg';
 
 export default function Footer() {
   return (

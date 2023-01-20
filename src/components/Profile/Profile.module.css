@@ -1,0 +1,31 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  text-align: right;
+}
+
+.profile p {
+  width: min-content;
+  font-size: 18px;
+  line-height: 142.6%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.picture {
+  width: 64px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-size: cover;
+}
+
+@media (max-width: 744px) {
+  .profile p {
+    font-size: 12px;
+  }
+
+  .picture {
+    width: 32px;
+  }
+}

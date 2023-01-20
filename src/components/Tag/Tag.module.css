@@ -1,0 +1,14 @@
+.tag {
+  display: flex;
+  min-width: 115px;
+  height: 25px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+
+.tag p {
+  color: white;
+  font-size: 14px;
+  margin: auto;
+  padding: 0 10px;
+}

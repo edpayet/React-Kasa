@@ -1,6 +1,6 @@
 import styles from './Header.module.css';
 import { NavLink } from 'react-router-dom';
-import { ReactComponent as ReactLogo } from '../../logo.svg';
+import { ReactComponent as ReactLogo } from '../../icons/logo.svg';
 
 export default function Header() {
   const links = [

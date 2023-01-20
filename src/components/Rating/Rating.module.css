@@ -1,0 +1,27 @@
+.rating {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.rating svg {
+  width: 30;
+  aspect-ratio: 1/1;
+}
+
+.full * {
+  color: var(--primary-color);
+}
+
+.empty * {
+  color: var(--medium-grey-color);
+}
+
+@media (max-width: 744px) {
+  .rating {
+    gap: 5px;
+  }
+  .rating svg {
+    width: 15;
+  }
+}

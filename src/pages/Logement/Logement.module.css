@@ -1,0 +1,50 @@
+.logement * {
+  color: var(--primary-color);
+}
+
+.quickInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.location {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 142.6%;
+}
+
+@media (max-width: 744px) {
+  .quickInfo {
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .host {
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .location {
+    font-size: 14px;
+  }
+}
