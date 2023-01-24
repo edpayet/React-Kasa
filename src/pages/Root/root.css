@@ -9,10 +9,15 @@
   --main-hor-padding-m: 20px;
 }
 
+#root {
+  padding-top: 40px;
+}
+
 body {
   position: relative;
   min-height: 100vh;
 }
+
 body * {
   margin: 0;
   box-sizing: border-box;
@@ -24,10 +29,12 @@ h3 {
   line-height: 142.6%;
 }
 
-main,
-header {
+main {
   max-width: calc(2560px - (var(--main-hor-padding-d) * 2));
-  margin: 40px var(--main-hor-padding-d) 0;
+  margin-left: var(--main-hor-padding-d);
+  margin-right: var(--main-hor-padding-d);
+  margin-top: 40px;
+  padding-bottom: 209px;
   font-family: var(--main-font);
   font-style: normal;
   font-weight: 500;
@@ -35,17 +42,12 @@ header {
   color: white;
 }
 
-main {
-  padding-bottom: 209px;
-}
-
 @media (max-width: 1024px) {
-  main,
-  header {
-    margin: 20px var(--main-hor-padding-m) 0;
+  #root {
+    padding-top: var(--main-hor-padding-m);
   }
 
   main {
-    margin-bottom: 209px;
+    margin: 20px var(--main-hor-padding-m) 209px;
   }
 }

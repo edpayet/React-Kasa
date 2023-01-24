@@ -1,9 +1,14 @@
-header {
+body header {
+  max-width: calc(2560px - (var(--main-hor-padding-d) * 2));
+  margin-left: var(--main-hor-padding-d);
+  margin-right: var(--main-hor-padding-d);
+  font-family: var(--main-font);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 68px;
+  box-sizing: border-box;
 }
 
 header * {
@@ -44,8 +49,14 @@ nav {
   scale: 1.1;
 }
 
+@media (max-width: 1024px) {
+  body header {
+    margin: 0 var(--main-hor-padding-m) 0;
+  }
+}
+
 @media (max-width: 744px) {
-  header {
+  body header {
     height: 47px;
   }
   .logo {

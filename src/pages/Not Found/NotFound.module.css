@@ -1,0 +1,42 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 66px;
+  color: var(--primary-color);
+}
+
+.errorCode {
+  font-weight: 700;
+  font-size: 288px;
+}
+
+.errorMessage {
+  font-weight: 500;
+  font-size: 36px;
+  text-align: center;
+}
+
+.redirectLink {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+main:has(.notFound) {
+  padding-bottom: 0;
+}
+
+@media (max-width: 744px) {
+  .errorCode {
+    font-size: 96px;
+  }
+
+  .errorMessage {
+    font-size: 18px;
+  }
+
+  .redirectLink {
+    font-size: 14px;
+  }
+}
