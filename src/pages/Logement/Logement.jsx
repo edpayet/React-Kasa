@@ -5,6 +5,8 @@ import getLogementById from '../../service/getLogementById';
 import TagContainer from '../../components/TagContainer/TagContainer';
 import Profile from '../../components/Profile/Profile';
 import Rating from '../../components/Rating/Rating';
+import Carousel from '../../components/Carousel/Carousel';
+import Dropdown from '../../components/Dropdown/Dropdown';
 
 export default function Logement() {
   const {
@@ -22,6 +24,7 @@ export default function Logement() {
 
   return (
     <div className={styles.logement}>
+      <Carousel pictures={pictures} />
       <div className={styles.quickInfo}>
         <div>
           <h1 className={styles.title}>{title}</h1>
@@ -32,6 +35,10 @@ export default function Logement() {
           <Profile host={host} />
           <Rating rating={rating} />
         </div>
+      </div>
+      <div className={styles.detail}>
+        <Dropdown title="Description" content={description} />
+        <Dropdown title="Équipements" content={equipments} />
       </div>
     </div>
   );

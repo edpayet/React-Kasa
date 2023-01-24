@@ -15,7 +15,7 @@ footer * {
 
 .logo {
   width: 122px;
-  padding-top: 66px;
+  margin-top: 66px;
 }
 
 .footerText {
@@ -25,14 +25,5 @@ footer * {
 @media (max-width: 744px) {
   .footerText {
     font-size: 12px;
-  }
-  nav {
-    height: 17px;
-  }
-  .navLink {
-    font-size: 12px;
-    padding-left: 10px;
-    text-transform: uppercase;
-    white-space: nowrap;
   }
 }

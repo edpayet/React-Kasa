@@ -1,15 +1,17 @@
 import styles from './Header.module.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { ReactComponent as ReactLogo } from '../../icons/logo.svg';
 
 export default function Header() {
   const links = [
-    { to: `/`, title: 'Acceuil' },
+    { to: `/`, title: 'Accueil' },
     { to: `/a-propos`, title: 'A Propos' },
   ];
   return (
     <header>
-      <ReactLogo className={styles.logo} />
+      <Link to={links[0].to} className={styles.logo}>
+        <ReactLogo />
+      </Link>
       <nav>
         {links.map(({ to, title }, index) => (
           <NavLink

@@ -28,6 +28,15 @@
   line-height: 142.6%;
 }
 
+.detail {
+  display: flex;
+  flex-direction: row;
+  gap: 76px;
+  margin-top: 24px;
+
+  margin-bottom: 20px;
+}
+
 @media (max-width: 744px) {
   .quickInfo {
     flex-direction: column;
@@ -46,5 +55,11 @@
 
   .location {
     font-size: 14px;
+  }
+
+  .detail {
+    margin-top: 16px;
+    flex-direction: column;
+    gap: 20px;
   }
 }
