@@ -40,8 +40,8 @@ export default function Logement() {
         <Collapse title="Description">{description}</Collapse>
         <Collapse title="Équipements">
           <ul>
-            {equipments.map((equipment) => (
-              <li>{equipment}</li>
+            {equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
             ))}
           </ul>
         </Collapse>

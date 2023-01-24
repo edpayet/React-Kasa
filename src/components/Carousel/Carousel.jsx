@@ -26,10 +26,10 @@ export default function Carousel({ pictures }) {
       <div className={styles.number}>
         {slideIndex}/{pictures.length}
       </div>
-      <button className={styles.prev} onClick={() => previous}>
+      <button className={styles.prev} onClick={previous}>
         <ArrowLeftIcon />
       </button>
-      <button className={styles.next} onClick={() => next}>
+      <button className={styles.next} onClick={next}>
         <ArrowRightIcon />
       </button>
     </div>
