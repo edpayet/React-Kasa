@@ -3,7 +3,9 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { ReactComponent as ArrowLeftIcon } from '../../icons/arrow_l.svg';
 
-export default function Dropdown({ title, content }) {
+export default function Dropdown({ title, content, isLarge }) {
+  // TODO: make a large version for about page
+
   function arrayToListElement(array) {
     return (
       <ul>

@@ -1,0 +1,20 @@
+.aPropos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.aPropos img {
+  width: 100%;
+  height: 223px;
+  border-radius: 25px;
+  filter: brightness(0.7);
+  object-fit: cover;
+  object-position: 50% 40%;
+}
+
+@media (max-width: 744px) {
+  .aPropos {
+    gap: 20px;
+  }
+}
