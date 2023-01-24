@@ -32,8 +32,10 @@ h3 {
 
 main {
   max-width: calc(2560px - (var(--main-hor-padding-d) * 2));
-  margin-left: var(--main-hor-padding-d);
-  margin-right: var(--main-hor-padding-d);
+  padding-left: var(--main-hor-padding-d);
+  padding-right: var(--main-hor-padding-d);
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 40px;
   padding-bottom: 209px;
   font-family: var(--main-font);
@@ -49,6 +51,8 @@ main {
   }
 
   main {
-    margin: 20px var(--main-hor-padding-m) 209px;
+    margin-top: 20px;
+    padding-left: var(--main-hor-padding-m);
+    padding-right: var(--main-hor-padding-m);
   }
 }

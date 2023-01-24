@@ -6,15 +6,19 @@ import { ReactComponent as ArrowRightIcon } from '../../icons/arrow_r.svg';
 export default function Carousel({ pictures }) {
   const [slideIndex, setSlideIndex] = useState(1);
 
-  function changeIndex(n) {
-    const newIndex = slideIndex + n;
-    console.log(newIndex);
-    if (newIndex > pictures.length) {
-      setSlideIndex(1);
-    } else if (newIndex < 1) {
-      setSlideIndex(pictures.length);
-    } else setSlideIndex(newIndex);
-  }
+  const previous = () => {
+    setSlideIndex((prev) => {
+      const newValue = prev - 1;
+      return newValue < 1 ? pictures.length : newValue;
+    });
+  };
+
+  const next = () => {
+    setSlideIndex((prev) => {
+      const newValue = prev + 1;
+      return newValue > pictures.length ? 1 : newValue;
+    });
+  };
 
   return (
     <div className={styles.carousel}>
@@ -22,10 +26,10 @@ export default function Carousel({ pictures }) {
       <div className={styles.number}>
         {slideIndex}/{pictures.length}
       </div>
-      <button className={styles.prev} onClick={() => changeIndex(-1)}>
+      <button className={styles.prev} onClick={() => previous}>
         <ArrowLeftIcon />
       </button>
-      <button className={styles.next} onClick={() => changeIndex(1)}>
+      <button className={styles.next} onClick={() => next}>
         <ArrowRightIcon />
       </button>
     </div>

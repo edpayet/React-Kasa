@@ -1,7 +1,9 @@
 body header {
   max-width: calc(2560px - (var(--main-hor-padding-d) * 2));
-  margin-left: var(--main-hor-padding-d);
-  margin-right: var(--main-hor-padding-d);
+  padding-left: var(--main-hor-padding-d);
+  padding-right: var(--main-hor-padding-d);
+  margin-left: auto;
+  margin-right: auto;
   font-family: var(--main-font);
   display: flex;
   flex-direction: row;
@@ -51,7 +53,8 @@ nav {
 
 @media (max-width: 1024px) {
   body header {
-    margin: 0 var(--main-hor-padding-m) 0;
+    padding-left: var(--main-hor-padding-m);
+    padding-right: var(--main-hor-padding-m);
   }
 }
 

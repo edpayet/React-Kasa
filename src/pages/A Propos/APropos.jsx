@@ -1,5 +1,5 @@
 import styles from './APropos.module.css';
-import Dropdown from '../../components/Dropdown/Dropdown';
+import Collapse from '../../components/Collapse/Collapse';
 import image from '../../icons/mountain_view.jpg';
 
 export default function APropos() {
@@ -29,8 +29,10 @@ export default function APropos() {
   return (
     <div className={styles.aPropos}>
       <img src={image} alt="mountain view" />
-      {blocks.map((block) => (
-        <Dropdown title={block.title} content={block.content} />
+      {blocks.map((block, index) => (
+        <Collapse key={index} title={block.title} size="large">
+          {block.content}
+        </Collapse>
       ))}
     </div>
   );

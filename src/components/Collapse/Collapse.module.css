@@ -1,4 +1,4 @@
-.dropdown {
+.collapse {
   position: relative;
   width: 100%;
 }
@@ -9,17 +9,36 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.collapse.medium .head,
+.collapse.medium .body {
+  font-size: 18px;
+}
+
+.collapse.large .head,
+.collapse.large .body {
+  font-size: 24px;
+}
+
+.collapse.medium .head {
   height: 52px;
   border-radius: 10px;
   padding: 13px 20px;
-  background-color: var(--primary-color);
-  color: white;
-  font-size: 18px;
+}
+
+.collapse.large .head {
+  height: 47px;
+  border-radius: 5px;
+  padding: 12px 33px 12px 18px;
 }
 
 .head button {
   width: 26px;
   height: 100%;
+  padding: 0;
   transition: 0.3s ease-out;
   user-select: none;
   background: none;
@@ -68,25 +87,31 @@
   animation-fill-mode: forwards; */
 }
 
-.dropdown svg {
+.collapse svg {
   transform: rotate(90deg);
   transition: all 0.3s;
 }
 
-.dropdown.closed svg {
+.collapse.closed svg {
   rotate: x 180deg;
 }
 
 @media (max-width: 744px) {
-  .head {
+  .collapse.medium .head,
+  .collapse.large .head {
     height: 30px;
     font-size: 13px;
     padding: 5px 10px;
   }
 
-  .body {
+  .collapse.medium .body,
+  .collapse.large .body {
     font-size: 12px;
     line-height: 17px;
+  }
+
+  .collapse.large .head button svg {
+    width: 9px;
   }
 }
 

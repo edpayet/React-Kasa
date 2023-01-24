@@ -6,7 +6,7 @@ import TagContainer from '../../components/TagContainer/TagContainer';
 import Profile from '../../components/Profile/Profile';
 import Rating from '../../components/Rating/Rating';
 import Carousel from '../../components/Carousel/Carousel';
-import Dropdown from '../../components/Dropdown/Dropdown';
+import Collapse from '../../components/Collapse/Collapse';
 
 export default function Logement() {
   const {
@@ -37,8 +37,14 @@ export default function Logement() {
         </div>
       </div>
       <div className={styles.detail}>
-        <Dropdown title="Description" content={description} />
-        <Dropdown title="Équipements" content={equipments} />
+        <Collapse title="Description">{description}</Collapse>
+        <Collapse title="Équipements">
+          <ul>
+            {equipments.map((equipment) => (
+              <li>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
       </div>
     </div>
   );
