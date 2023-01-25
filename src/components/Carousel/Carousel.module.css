@@ -41,6 +41,11 @@
   border: none;
 }
 
+.oneSlide .prev,
+.oneSlide .next {
+  display: none;
+}
+
 .next {
   right: 0;
 }

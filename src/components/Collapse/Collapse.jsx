@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { ReactComponent as ArrowLeftIcon } from '../../icons/arrow_l.svg';
 
 export default function Collapse({ title, size = 'medium', children }) {
-  const [openState, setOpenState] = useState(true);
+  const [openState, setOpenState] = useState(false);
 
   function switchOpenState() {
     if (openState) setOpenState(false);
@@ -20,12 +20,12 @@ export default function Collapse({ title, size = 'medium', children }) {
         styles[size]
       )}
     >
-      <div className={styles.head}>
+      <button className={styles.head} onClick={switchOpenState}>
         {title}
-        <button onClick={switchOpenState}>
+        <div className={styles.arrowIcon}>
           <ArrowLeftIcon />
-        </button>
-      </div>
+        </div>
+      </button>
       <div className={styles.body}>{children}</div>
     </div>
   );

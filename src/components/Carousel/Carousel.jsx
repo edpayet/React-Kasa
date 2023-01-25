@@ -1,5 +1,6 @@
 import styles from './Carousel.module.css';
 import { useState } from 'react';
+import classNames from 'classnames';
 import { ReactComponent as ArrowLeftIcon } from '../../icons/arrow_l.svg';
 import { ReactComponent as ArrowRightIcon } from '../../icons/arrow_r.svg';
 
@@ -21,11 +22,17 @@ export default function Carousel({ pictures }) {
   };
 
   return (
-    <div className={styles.carousel}>
+    <div
+      className={classNames(
+        styles.carousel,
+        pictures.length > 1 ? null : styles.oneSlide
+      )}
+    >
       <img src={pictures[slideIndex - 1]} alt={`Logement ${slideIndex}`} />
       <div className={styles.number}>
         {slideIndex}/{pictures.length}
       </div>
+
       <button className={styles.prev} onClick={previous}>
         <ArrowLeftIcon />
       </button>
