@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Root from './pages/Root/root';
@@ -9,7 +9,7 @@ import Home, { loader as homeLoader } from './pages/Home/Home';
 import Logement, { loader as logementLoader } from './pages/Logement/Logement';
 import APropos from './pages/A Propos/APropos';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <Root />,
