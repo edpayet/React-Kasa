@@ -1,7 +1,6 @@
 import styles from './Collapse.module.css';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { ReactComponent as ArrowLeftIcon } from '../../icons/arrow_l.svg';
 
 export default function Collapse({ title, size = 'medium', children }) {
@@ -14,11 +13,9 @@ export default function Collapse({ title, size = 'medium', children }) {
 
   return (
     <div
-      className={classNames(
-        styles.collapse,
-        openState ? styles.open : styles.closed,
-        styles[size]
-      )}
+      className={`${styles.collapse} ${styles[size]} ${
+        openState ? styles.open : styles.closed
+      }`}
     >
       <button className={styles.head} onClick={switchOpenState}>
         {title}
